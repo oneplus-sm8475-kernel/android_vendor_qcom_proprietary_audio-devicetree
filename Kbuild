@@ -41,21 +41,11 @@ dtbo-$(CONFIG_ARCH_WAIPIO) += oplus/wly-20846-audio-waipio-overlay.dtbo \
                  oplus/jnc-20865-audio-waipio-overlay.dtbo \
                  oplus/baize-21001-audio-waipio-overlay.dtbo \
                  oplus/ferrari-21631-audio-waipio-overlay.dtbo \
-                 oplus/kunpeng-21009-audio-waipio-overlay.dtbo \
-                 oplus/jennie-21605-audio-waipio-overlay.dtbo \
-                 oplus/jennie-21606-audio-waipio-overlay.dtbo \
-                 oplus/ovaltine-21841-audio-waipio-overlay.dtbo
+                 oplus/kunpeng-21009-audio-waipio-overlay.dtbo
 
 #for cape platform
-dtbo-$(CONFIG_ARCH_CAPE) += oplus/kunpeng-21009-audio-cape-overlay.dtbo \
-                 oplus/jennie-21605-audio-cape-overlay.dtbo \
-                 oplus/jennie-21606-audio-cape-overlay.dtbo \
-                 oplus/ovaltine-21841-audio-cape-overlay.dtbo
-
-#for diwali platform
-dtbo-$(CONFIG_ARCH_DIWALI) += oplus/wuyi-21125-audio-diwali-overlay.dtbo \
-                 oplus/wuyi-21125-audio-diwali-overlay-t0.dtbo
-#OPLUS_DTS_OVERLAY end
+dtbo-$(CONFIG_ARCH_CAPE) += oplus/whiteswan-22001-audio-cape-overlay.dtbo \
+                 oplus/lvzhou-22015-audio-cape-overlay.dtbo
 
  always-y    := $(dtb-y) $(dtbo-y)
  subdir-y    := $(dts-dirs)

@@ -3,23 +3,7 @@
 	qcom,cdc-micbias1-mv = <2700>;
 	qcom,cdc-micbias2-mv = <2700>;
 	qcom,cdc-micbias3-mv = <2700>;
-};
-/* OPLUS_ARCH_EXTENDS */
-
-&cdc_dmic01_gpios {
-	status = "disabled";
-};
-
-&cdc_dmic23_gpios {
-	status = "disabled";
-};
-
-&cdc_dmic45_gpios {
-	status = "disabled";
-};
-
-&cdc_dmic67_gpios {
-	status = "disabled";
+	qcom,cdc-micbias4-mv = <2700>;
 };
 
 &waipio_snd {
@@ -75,3 +59,31 @@
 		"VA DMIC3", "VA MIC BIAS3",
 		"VA DMIC4", "VA MIC BIAS4";
 };
+
+&qupv3_se13_i2c {
+	status = "ok";
+	qcom,clk-freq-out = <400000>;
+	tfa98xx@34 {
+		compatible = "nxp,tfa98xx";
+		reg = <0x34>;
+		reset-gpio = <&tlmm 50 0x00>;
+		tfa9874_vdd-supply = <&S10B>;
+		tfa_min_range = <5000>;
+		tfa_max_range = <8000>;
+		tfa_channel = <1>;
+		status = "ok";
+		is_use_freq = <1>;
+	};
+	tfa98xx@35 {
+		compatible = "nxp,tfa98xx";
+		reg = <0x35>;
+		reset-gpio = <&tlmm 51 0x00>;
+		tfa9874_vdd-supply = <&S10B>;
+		tfa_min_range = <5000>;
+		tfa_max_range = <8000>;
+		tfa_channel = <0>;
+		status = "ok";
+		is_use_freq = <1>;
+	};
+};
+/* OPLUS_ARCH_EXTENDS */

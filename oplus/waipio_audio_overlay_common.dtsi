@@ -113,8 +113,6 @@
 		reg = <0x34>;
 		reset-gpio = <&tlmm 50 0x00>;
 		tfa9874_vdd-supply = <&S10B>;
-		tfa-vdd-voltage = <1800000 1800000>;
-		tfa-vdd-current = <200000>;
 		tfa_min_range = <5000>;
 		tfa_max_range = <8000>;
 		tfa_channel = <0>;
@@ -125,8 +123,6 @@
 		reg = <0x35>;
 		reset-gpio = <&tlmm 51 0x00>;
 		tfa9874_vdd-supply = <&S10B>;
-		tfa-vdd-voltage = <1800000 1800000>;
-		tfa-vdd-current = <200000>;
 		tfa_min_range = <5000>;
 		tfa_max_range = <8000>;
 		tfa_channel = <1>;
